@@ -1,0 +1,49 @@
+while True:
+    name = input("Your name: ")
+    if name.isalpha() and len(name) > 2:
+        break
+    print("Only enter letters (more than 2) for your name, please")
+
+
+while True:
+    Math = input("Your Math score is: ")
+    if Math.isdigit():
+      Math = int(Math)
+      if 0 <= Math <= 20:
+         break
+    print("Only enter numbers (0-20) for your score, please")
+
+
+while True:
+    English = input("Your English score is: ")
+    if English.isdigit():
+      English = int(English)
+      if 0 <= English <= 20:
+         break
+    print("Only enter numbers (0-20) for your score, please")
+
+while True:
+    Science = input("Your Science score is: ")
+    if Science.isdigit():
+      Science = int(Science)
+      if 0 <= Science <= 20:
+         break
+    print("Only enter numbers (0-20) for your score, please")
+
+total = Math + English + Science
+average = total / 3
+average = round(average, 2)
+print()
+print()
+print("Student's name: ", name)
+print("TOTAL is: ", total)
+print(f"Your AVERAGE is: {average:.2f}")
+
+if average >= 18:
+    print("You're Excellent!!!")
+elif average >= 13:
+    print("Medium! Try more!")
+elif average >= 10:
+    print("Passed")
+else:
+    print("You Failed!")
