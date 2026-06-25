@@ -41,3 +41,4 @@ elif 50 <= average < 75:
 else:
   print(f"Your average score: {average:.2f} is Excellent, BRAVO!!!")
   print()
+  print()
