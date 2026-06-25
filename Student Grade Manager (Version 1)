@@ -1,0 +1,52 @@
+while True:
+    name = input("What is your name?: ")
+    if name.isalpha() and len(name) >= 3:
+     break
+    print("Only letters are allowed. (minimum 3)")
+
+
+while True:
+  Math = input("What is your Math score?: ")
+  if Math.isdigit():
+    Math = int(Math)
+    if 0<= Math <= 100:
+     break
+  print("Enter numbers 0-100")
+
+while True:
+  English = input("What is your English score?: ")
+  if English.isdigit():
+    English = int(English)
+    if 0<= English <= 100:
+     break
+  print("Enter numbers 0-100")
+
+while True:
+  Science = input("What is your Science score?: ")
+  if Science.isdigit():
+    Science = int(Science)
+    if 0<= Science <= 100:
+     break
+  print("Enter numbers 0-100")
+
+while True:
+  History = input("What is your History score?: ")
+  if History.isdigit():
+    History = int(History)
+    if 0<= History <= 100:
+     break
+  print("Enter numbers 0-100")
+
+
+scores = [Math, English, Science, History]
+
+print(f"Math: {scores[0]}")
+print(f"English: {scores[1]}")
+print(f"Science: {scores[2]}")
+print(f"History: {scores[3]}")
+
+total = sum(scores)
+average = total / len(scores)
+
+print(f"Total: {total}")
+print(f"Average: {average:.2f}")

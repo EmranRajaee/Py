@@ -1,0 +1,43 @@
+while True:
+    name = input("What is your name?: ")
+    if name.isalpha() and len(name) >= 3:
+     break
+    print("Only letters are allowed. (minimum 3)")
+
+def get_score(subject):
+ while True:
+  score = input(f"What is your {subject} score?: ")
+  if score.isdigit():
+    score = int(score)
+    if 0<= score <= 100:
+     return score
+  print("Enter numbers 0-100")
+
+Math = get_score("Math")
+English = get_score("English")
+Science = get_score("Science")
+History = get_score("History")
+
+scores = [Math, English, Science, History]
+
+print(f"Math: {scores[0]}")
+print(f"English: {scores[1]}")
+print(f"Science: {scores[2]}")
+print(f"History: {scores[3]}")
+print()
+total = sum(scores)
+average = total / len(scores)
+
+print(f"Total: {total}")
+print(f"Average: {average:.2f}")
+print()
+
+if 0 <= average <= 30:
+  print(f"Your average: {average:.2f} is too low, Try MORE!")
+elif 30 <= average < 50:
+  print(f"Your average score: {average:.2f} is not so good, Hope you try more!")
+elif 50 <= average < 75:
+  print(f"Your average score: {average:.2f} is good, Well done!")
+else:
+  print(f"Your average score: {average:.2f} is Excellent, BRAVO!!!")
+  print()
