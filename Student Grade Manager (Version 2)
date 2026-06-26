@@ -19,7 +19,9 @@ Science = get_score("Science")
 History = get_score("History")
 
 scores = [Math, English, Science, History]
-
+print()
+print(f"Student: {name}")
+print()
 print(f"Math: {scores[0]}")
 print(f"English: {scores[1]}")
 print(f"Science: {scores[2]}")
