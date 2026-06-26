@@ -1,0 +1,22 @@
+while True:
+    name = input(f"Your name: ")
+    if name.isalpha() and len(name) >= 3:
+        break
+    print(f"Please use letters. (minimum three)")
+
+
+def get_age():
+     while True:
+        Age = input("Your age: ")
+        if Age.isdigit():
+            Age = int(Age)
+            if 0 < Age <= 120:
+             return Age
+        print(f"Your credential are    not correct. please enter numbers 0-120")
+
+Age = get_age()
+print(f"Your age is {Age}.")
+        
+
+        
+        
