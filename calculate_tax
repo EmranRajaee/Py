@@ -1,0 +1,4 @@
+def calculate_tax(price):
+    return price * 0.75
+price = float(int(input(f"ENTER PRICE: ")))
+print(f"The price after calculating tax is: {calculate_tax(price):.2f} $")
