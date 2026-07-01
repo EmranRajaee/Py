@@ -1,0 +1,59 @@
+while True:
+	
+ #name
+
+ name = input("Enter your name: ")
+ if name.isalpha() and len(name) >= 3:
+  print(f"\nWelcome {name}!")
+  break
+ print("Type only letters. (at least 3)")
+	
+ #display books
+
+books = ["C++", "Python", "C", "R", "Java", "AI"]
+
+   #borrow a book
+   
+def bor_book():
+   while True:
+    print("\nAvailable books:")
+    for x in books:
+       print(x)
+    book = input("\nChoose a book to borrow: ")
+    if book in books:
+        books.remove(book)
+        print(f"\nYou borrowed {book}.")
+        if len(books) == 0:
+           print("\nThere are no books left.")
+           break
+
+
+
+        print("\nThe remaining books are: ")
+        for x in books:
+           print(x)
+    else:
+        print("Enter name of the book exactly.")
+        continue
+    answer = input("Do you want to borrow another one? Yes/No ")
+    if answer == "Yes":
+         continue
+    elif answer == "No":
+        print("Thanks for your cooperation! Have a good day.") 
+        break
+         
+    else:
+       print("Please type Yes or No.")
+    
+    
+          
+bor_book()
+
+
+
+
+   #else:
+    #print(f"You borrowed the book: {book} earlier or it not a book in the library. (check the name you etered, maybe misspelled. ")        
+    #else:
+         #print("Type 'Yes' or 'No', please")
+    #print("The book is not available right now.")      
