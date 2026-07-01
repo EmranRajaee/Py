@@ -25,7 +25,16 @@ else:
 
 
 list_1 = ["mango", "apple", "orange", "cherry", "melon", "pineapple", "apricot"]
-new_list = list_1.copy()
+new_list = list(list_1)
 new_list.append("peach")
 new_list.insert(0, "pomegranite")
 print(f"My new_list will be: {new_list}.")
+
+
+
+
+list1 = [1, 2, 3]
+list2 = ["a", "b", "c"]
+list3 = list2 + list1
+print(list3)
+
