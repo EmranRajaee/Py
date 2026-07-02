@@ -40,9 +40,9 @@ def bor_book():
         continue
     
     answer = input("Do you want to borrow another one? Yes/No ")
-    if answer == "Yes":
+    if answer.lower() == "yes":
          continue
-    elif answer == "No":
+    elif answer.lower() == "no":
         print("Thanks for your cooperation! Have a good day.") 
         break
          
