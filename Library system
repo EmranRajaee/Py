@@ -11,6 +11,7 @@ while True:
  #display books
 
 books = ["C++", "Python", "C", "R", "Java", "AI"]
+borrowed_books = []
 
    #borrow a book
    
@@ -22,19 +23,22 @@ def bor_book():
     book = input("\nChoose a book to borrow: ")
     if book in books:
         books.remove(book)
+        borrowed_books.append(book)
         print(f"\nYou borrowed {book}.")
         if len(books) == 0:
            print("\nThere are no books left.")
            break
 
-
-
         print("\nThe remaining books are: ")
         for x in books:
            print(x)
+    elif book in borrowed_books:
+       print(f"You borrowed the book '{book}' earlier, Choose another one, please.")
+       continue
     else:
         print("Enter name of the book exactly.")
         continue
+    
     answer = input("Do you want to borrow another one? Yes/No ")
     if answer == "Yes":
          continue
